@@ -1,4 +1,3 @@
-<!-- deploy -->
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,42 +6,127 @@
 <title>Cemitério Familiar</title>
 
 <style>
-body {
-  margin: 0;
-  background: #0e0e0e;
-  color: #eaeaea;
-  font-family: Arial, sans-serif;
-  text-align: center;
-  padding: 30px;
+body{
+  margin:0;
+  background:#0e0e0e;
+  color:#eaeaea;
+  font-family:Arial, sans-serif;
 }
-.card {
-  background: #1a1a1a;
-  border-radius: 12px;
-  padding: 20px;
-  margin: 15px auto;
-  max-width: 420px;
-  cursor: pointer;
+header{
+  text-align:center;
+  padding:30px 15px;
 }
-.card:hover {
-  background: #222;
+header h1{
+  margin:0;
 }
-img {
-  width: 100%;
-  border-radius: 10px;
+header p{
+  color:#bdbdbd;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px,1fr));
+  gap:20px;
+  padding:20px;
+  max-width:1100px;
+  margin:auto;
+}
+
+.card{
+  background:#1a1a1a;
+  border-radius:14px;
+  padding:15px;
+  text-align:center;
+  cursor:pointer;
+  transition:0.2s;
+}
+.card:hover{
+  background:#242424;
+  transform:scale(1.02);
+}
+
+.card img{
+  width:100%;
+  height:220px;
+  object-fit:cover;
+  border-radius:10px;
+  margin-bottom:10px;
+}
+
+.nome{
+  font-size:18px;
+  margin:8px 0 4px;
+}
+.data{
+  font-size:14px;
+  color:#b0b0b0;
+}
+
+footer{
+  text-align:center;
+  font-size:13px;
+  color:#777;
+  padding:20px;
 }
 </style>
 </head>
 
 <body>
 
-<h1>🕊️ Cemitério Familiar</h1>
-<p>Selecione um ente querido para visitar o memorial.</p>
+<header>
+  <h1>🕊️ Cemitério Familiar</h1>
+  <p>Selecione um ente querido para visitar o memorial</p>
+</header>
 
-<div class="card" onclick="alert('Memorial em construção')">
-  <img src="https://via.placeholder.com/400x250?text=Foto" alt="Foto">
-  <h3>Nome do Falecido</h3>
-  <p>00/00/0000</p>
-</div>
+<section class="grid">
+
+  <!-- FALECIDO 1 -->
+  <div class="card" onclick="alert('Memorial em breve')">
+    <img src="https://via.placeholder.com/400x300?text=Foto+1">
+    <div class="nome">José da Silva</div>
+    <div class="data">1940 – 2010</div>
+  </div>
+
+  <!-- FALECIDO 2 -->
+  <div class="card" onclick="alert('Memorial em breve')">
+    <img src="https://via.placeholder.com/400x300?text=Foto+2">
+    <div class="nome">Maria Aparecida</div>
+    <div class="data">1945 – 2018</div>
+  </div>
+
+  <!-- FALECIDO 3 -->
+  <div class="card" onclick="alert('Memorial em breve')">
+    <img src="https://via.placeholder.com/400x300?text=Foto+3">
+    <div class="nome">Antônio Pereira</div>
+    <div class="data">1932 – 2005</div>
+  </div>
+
+  <!-- FALECIDO 4 -->
+  <div class="card" onclick="alert('Memorial em breve')">
+    <img src="https://via.placeholder.com/400x300?text=Foto+4">
+    <div class="nome">Helena Martins</div>
+    <div class="data">1950 – 2020</div>
+  </div>
+
+  <!-- FALECIDO 5 -->
+  <div class="card" onclick="alert('Memorial em breve')">
+    <img src="https://via.placeholder.com/400x300?text=Foto+5">
+    <div class="nome">Carlos Alberto</div>
+    <div class="data">1962 – 2022</div>
+  </div>
+
+  <!-- FALECIDO 6 -->
+  <div class="card" onclick="alert('Memorial em breve')">
+    <img src="https://via.placeholder.com/400x300?text=Foto+6">
+    <div class="nome">Ana Lúcia</div>
+    <div class="data">1970 – 2019</div>
+  </div>
+
+</section>
+
+<footer>
+  Memorial digital da família • Projeto privado
+</footer>
 
 </body>
 </html>
